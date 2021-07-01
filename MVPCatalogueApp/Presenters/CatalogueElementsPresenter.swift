@@ -7,6 +7,19 @@
 
 import Foundation
 
-class CatalogueElementsPresenter {
+protocol CatalogueElementsViewDelegate: NSObjectProtocol {
     
+    func displayElements()
+}
+
+class CatalogueElementsPresenter {
+    weak private var catalogueElementsViewDelegate: CatalogueElementsViewDelegate?
+    
+    func setViewDelegate(catalogueElementsViewDelegate: CatalogueElementsViewDelegate?) {
+        self.catalogueElementsViewDelegate = catalogueElementsViewDelegate
+    }
+    
+    func presentCatalogueElements() {
+        self.catalogueElementsViewDelegate?.displayElements()
+    }
 }
