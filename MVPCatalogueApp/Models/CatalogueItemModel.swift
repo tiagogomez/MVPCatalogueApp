@@ -7,7 +7,14 @@
 
 import Foundation
 
-struct CatalogueItemModel {
-    let itemName: String
-    let itemDescription: String
+struct CatalogueResult: Codable {
+    
+    var results: [CatalogueItemModel]
+}
+
+struct CatalogueItemModel: Codable {
+    
+    var title: String
+    var id: String
+    var price: Double
 }

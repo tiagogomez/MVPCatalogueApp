@@ -11,12 +11,22 @@ class CatalogueElementsViewController: UIViewController {
         
     @IBOutlet weak var catalogueTableView: UITableView!
     private let catalogueElementsPresenter = CatalogueElementsPresenter()
+    var listOfElements = [CatalogueItemModel]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         catalogueTableView.delegate = self
         catalogueTableView.dataSource = self
         catalogueElementsPresenter.setViewDelegate(catalogueElementsViewDelegate: self)
+        let catalogueRequest = CatalogueRequest(site_id: "MLA", category_id: "MLA1055")
+        catalogueRequest.getCatalogueElements { [weak self] result in
+            switch result {
+            case .success(let catalogueElemets):
+                print(catalogueElemets)
+            case .failure(let error):
+                print(error)
+            }
+        }
     }
 }
 
