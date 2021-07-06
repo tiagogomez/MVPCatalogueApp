@@ -9,17 +9,23 @@ import Foundation
 
 protocol CatalogueElementsViewDelegate: NSObjectProtocol {
     
-    func displayElements()
+    func displayElements(_ catalogueElements: [CatalogueItemModel])
 }
 
 class CatalogueElementsPresenter {
     weak private var catalogueElementsViewDelegate: CatalogueElementsViewDelegate?
+    private var request: APIRequest<CatalogueResource>?
     
     func setViewDelegate(catalogueElementsViewDelegate: CatalogueElementsViewDelegate?) {
         self.catalogueElementsViewDelegate = catalogueElementsViewDelegate
     }
     
-    func presentCatalogueElements() {
-        self.catalogueElementsViewDelegate?.displayElements()
+    func loadCatalogueElements() {
+        let catalogueResource = CatalogueResource(site_id: "MLA", category_id: "MLA1055")
+        let catalogueRequest = APIRequest(resource: catalogueResource)
+        self.request = catalogueRequest
+        catalogueRequest.execute { [weak self] result in
+            self?.catalogueElementsViewDelegate?.displayElements(result ?? [])
+        }
     }
 }

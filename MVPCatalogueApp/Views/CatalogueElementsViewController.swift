@@ -11,6 +11,7 @@ class CatalogueElementsViewController: UIViewController {
         
     @IBOutlet weak var catalogueTableView: UITableView!
     private let catalogueElementsPresenter = CatalogueElementsPresenter()
+    
     var listOfElements = [CatalogueItemModel]()
     
     override func viewDidLoad() {
@@ -18,22 +19,17 @@ class CatalogueElementsViewController: UIViewController {
         catalogueTableView.delegate = self
         catalogueTableView.dataSource = self
         catalogueElementsPresenter.setViewDelegate(catalogueElementsViewDelegate: self)
-        let catalogueRequest = CatalogueRequest(site_id: "MLA", category_id: "MLA1055")
-        catalogueRequest.getCatalogueElements { [weak self] result in
-            switch result {
-            case .success(let catalogueElemets):
-                print(catalogueElemets)
-            case .failure(let error):
-                print(error)
-            }
-        }
+        catalogueElementsPresenter.loadCatalogueElements()
     }
 }
 
 extension CatalogueElementsViewController: CatalogueElementsViewDelegate {
     
-    func displayElements() {
-        
+    func displayElements(_ catalogueElements: [CatalogueItemModel]) {
+        self.listOfElements = catalogueElements
+        DispatchQueue.main.async {
+            self.catalogueTableView.reloadData()
+        }
     }
 }
 
@@ -44,12 +40,13 @@ extension CatalogueElementsViewController: UITableViewDelegate {
 extension CatalogueElementsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return listOfElements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "test"
+        cell.textLabel?.text = listOfElements[indexPath.row].title
+
         return cell
     }
     

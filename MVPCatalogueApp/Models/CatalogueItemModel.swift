@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct CatalogueResult: Codable {
+struct Wrapper<T: Decodable>: Decodable {
     
-    var results: [CatalogueItemModel]
+    var results: [T]
 }
 
 struct CatalogueItemModel: Codable {
