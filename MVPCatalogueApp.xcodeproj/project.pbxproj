@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		4D0C14ED268E3E3000702AA4 /* CatalogueElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */; };
 		4D1FEC492694CBB200DA015C /* CatalogueRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1FEC482694CBB200DA015C /* CatalogueRequest.swift */; };
+		4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */; };
+		4DAA2D9C2695FF2100CA9A52 /* CatalogueElementsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */; };
 		4DF1C33D268CC461002FB8D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C33C268CC461002FB8D8 /* AppDelegate.swift */; };
 		4DF1C33F268CC461002FB8D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C33E268CC461002FB8D8 /* SceneDelegate.swift */; };
 		4DF1C346268CC463002FB8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF1C345268CC463002FB8D8 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 /* Begin PBXFileReference section */
 		4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementsViewController.xib; sourceTree = "<group>"; };
 		4D1FEC482694CBB200DA015C /* CatalogueRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueRequest.swift; sourceTree = "<group>"; };
+		4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsViewCell.swift; sourceTree = "<group>"; };
+		4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementsViewCell.xib; sourceTree = "<group>"; };
 		4DF1C339268CC461002FB8D8 /* MVPCatalogueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPCatalogueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF1C33C268CC461002FB8D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF1C33E268CC461002FB8D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,6 +49,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DF1C35B268CCFC0002FB8D8 /* CatalogueElementsViewController.swift */,
+				4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		4DAA2D9F2695FF9C00CA9A52 /* ViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */,
+				4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */,
+			);
+			path = ViewCells;
+			sourceTree = "<group>";
+		};
 		4DF1C330268CC461002FB8D8 = {
 			isa = PBXGroup;
 			children = (
@@ -97,8 +119,8 @@
 		4DF1C353268CC66B002FB8D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4DF1C35B268CCFC0002FB8D8 /* CatalogueElementsViewController.swift */,
-				4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */,
+				4DAA2D9F2695FF9C00CA9A52 /* ViewCells */,
+				4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -179,6 +201,7 @@
 				4DF1C349268CC463002FB8D8 /* LaunchScreen.storyboard in Resources */,
 				4D0C14ED268E3E3000702AA4 /* CatalogueElementsViewController.xib in Resources */,
 				4DF1C346268CC463002FB8D8 /* Assets.xcassets in Resources */,
+				4DAA2D9C2695FF2100CA9A52 /* CatalogueElementsViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -196,6 +219,7 @@
 				4DF1C33F268CC461002FB8D8 /* SceneDelegate.swift in Sources */,
 				4DF1C359268CC93B002FB8D8 /* NetworkRequestProtocol.swift in Sources */,
 				4D1FEC492694CBB200DA015C /* CatalogueRequest.swift in Sources */,
+				4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

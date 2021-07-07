@@ -19,6 +19,10 @@ class CatalogueElementsViewController: UIViewController {
         catalogueTableView.delegate = self
         catalogueTableView.dataSource = self
         catalogueElementsPresenter.setViewDelegate(catalogueElementsViewDelegate: self)
+        catalogueTableView.register(CatalogueElementsViewCell.nib(),
+                                    forCellReuseIdentifier: CatalogueElementsViewCell.identifier)
+        catalogueTableView.rowHeight = UITableView.automaticDimension
+        catalogueTableView.estimatedRowHeight = 140
         catalogueElementsPresenter.loadCatalogueElements()
     }
 }
@@ -44,11 +48,8 @@ extension CatalogueElementsViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        cell.textLabel?.text = listOfElements[indexPath.row].title
-
-        return cell
+        let catalogueCell = catalogueTableView.dequeueReusableCell(withIdentifier: CatalogueElementsViewCell.identifier) as! CatalogueElementsViewCell
+        catalogueCell.configure(title: listOfElements[indexPath.row].title, imageName: "gear")
+        return catalogueCell
     }
-    
-    
 }
