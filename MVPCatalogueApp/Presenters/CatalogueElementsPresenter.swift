@@ -13,6 +13,7 @@ protocol CatalogueElementsViewDelegate: NSObjectProtocol {
 }
 
 class CatalogueElementsPresenter {
+    
     weak private var catalogueElementsViewDelegate: CatalogueElementsViewDelegate?
     private var request: APIRequest<CatalogueResource>?
     

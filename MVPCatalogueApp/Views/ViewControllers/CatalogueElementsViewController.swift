@@ -22,7 +22,7 @@ class CatalogueElementsViewController: UIViewController {
         catalogueTableView.register(CatalogueElementsViewCell.nib(),
                                     forCellReuseIdentifier: CatalogueElementsViewCell.identifier)
         catalogueTableView.rowHeight = UITableView.automaticDimension
-        catalogueTableView.estimatedRowHeight = 140
+        catalogueTableView.estimatedRowHeight = 138
         catalogueElementsPresenter.loadCatalogueElements()
     }
 }
@@ -49,7 +49,7 @@ extension CatalogueElementsViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let catalogueCell = catalogueTableView.dequeueReusableCell(withIdentifier: CatalogueElementsViewCell.identifier) as! CatalogueElementsViewCell
-        catalogueCell.configure(title: listOfElements[indexPath.row].title, imageName: "gear")
+        catalogueCell.configure(with: listOfElements[indexPath.row])
         return catalogueCell
     }
 }

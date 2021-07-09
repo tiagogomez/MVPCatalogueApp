@@ -5,14 +5,18 @@
 //  Created by Santiago Gómez Giraldo - Ceiba Software on 30/06/21.
 //
 
-import Foundation
+//https://matteomanferdini.com/network-requests-rest-apis-ios-swift/
+
+import UIKit
 
 protocol APIResource {
+    
     associatedtype ModelType: Decodable
     var url: URL { get }
 }
 
 protocol NetworkRequest: AnyObject {
+    
     associatedtype ModelType
     
     func decode(_ data: Data) -> ModelType?
@@ -20,6 +24,7 @@ protocol NetworkRequest: AnyObject {
 }
 
 extension NetworkRequest {
+    
     fileprivate func load(_ url: URL, withCompletion completion: @escaping (ModelType?) -> Void) {
         let task = URLSession.shared.dataTask(with: url) { [weak self] (data, _ , _) -> Void in
             guard let data = data, let value = self?.decode(data) else {
@@ -33,6 +38,7 @@ extension NetworkRequest {
 }
 
 class APIRequest<Resource: APIResource> {
+    
     let resource: Resource
     
     init(resource: Resource) {
@@ -41,6 +47,7 @@ class APIRequest<Resource: APIResource> {
 }
 
 extension APIRequest: NetworkRequest {
+    
     func decode(_ data: Data) -> [Resource.ModelType]? {
         let decoder = JSONDecoder()
         let catalogueResponse = try? decoder.decode(Wrapper<Resource.ModelType>.self, from: data)

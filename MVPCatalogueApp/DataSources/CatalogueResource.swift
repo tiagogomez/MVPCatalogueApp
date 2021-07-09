@@ -1,5 +1,5 @@
 //
-//  CatalogueRequest.swift
+//  CatalogueResource.swift
 //  MVPCatalogueApp
 //
 //  Created by Santiago Gómez Giraldo - Ceiba Software on 6/07/21.

@@ -17,4 +17,5 @@ struct CatalogueItemModel: Codable {
     var title: String
     var id: String
     var price: Double
+    var thumbnail: String
 }
