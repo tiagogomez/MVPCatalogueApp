@@ -9,9 +9,9 @@ import UIKit
 
 protocol CatalogueElementsCellDelegate: NSObjectProtocol {
     
-    func displayElement(title: String, image: UIImage)
+    func displayElement(title: String)
     
-    func updateImage(image: UIImage)
+    func displayElementImage(image: UIImage)
 }
 
 class CatalogueElementsCellPresenter {
@@ -23,19 +23,12 @@ class CatalogueElementsCellPresenter {
     }
     
     func loadCatalogueElement(_ element: CatalogueItemModel) {
-        catalogueElementsCellDelegate?.displayElement(title: element.title,
-                                                      image: UIImage())
         guard let imageURL = URL(string: element.thumbnail) else {
             fatalError()
         }
-        DispatchQueue.global().async { [weak self] in
-            if let data = try? Data(contentsOf: imageURL) {
-                if let image = UIImage(data: data) {
-                    DispatchQueue.main.async {
-                        self?.catalogueElementsCellDelegate?.updateImage(image: image)
-                    }
-                }
-            }
+        catalogueElementsCellDelegate?.displayElement(title: element.title)
+        UIImageHelper.loadImageFrom(url: imageURL) { [weak self] image in
+            self?.catalogueElementsCellDelegate?.displayElementImage(image: image)
         }
     }
 }

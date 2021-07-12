@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4D008E75269CC16200BBED57 /* UIImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E74269CC16200BBED57 /* UIImageHelper.swift */; };
 		4D0C14ED268E3E3000702AA4 /* CatalogueElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */; };
 		4D1FEC492694CBB200DA015C /* CatalogueResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1FEC482694CBB200DA015C /* CatalogueResource.swift */; };
 		4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4D008E74269CC16200BBED57 /* UIImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageHelper.swift; sourceTree = "<group>"; };
 		4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementsViewController.xib; sourceTree = "<group>"; };
 		4D1FEC482694CBB200DA015C /* CatalogueResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueResource.swift; sourceTree = "<group>"; };
 		4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsViewCell.swift; sourceTree = "<group>"; };
@@ -51,22 +53,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4D008E6E269CB28100BBED57 /* CatalogueElementCell */ = {
+			isa = PBXGroup;
+			children = (
+				4DAA2DA22697469600CA9A52 /* CatalogueElementsCellPresenter.swift */,
+				4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */,
+				4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */,
+			);
+			path = CatalogueElementCell;
+			sourceTree = "<group>";
+		};
+		4D008E6F269CB2A600BBED57 /* CatalogueElementsList */ = {
+			isa = PBXGroup;
+			children = (
+				4DF1C35F268CD074002FB8D8 /* CatalogueElementsPresenter.swift */,
+				4DF1C35B268CCFC0002FB8D8 /* CatalogueElementsViewController.swift */,
+				4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */,
+			);
+			path = CatalogueElementsList;
+			sourceTree = "<group>";
+		};
+		4D008E73269CC13500BBED57 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4D008E74269CC16200BBED57 /* UIImageHelper.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4DF1C35B268CCFC0002FB8D8 /* CatalogueElementsViewController.swift */,
-				4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */,
+				4D008E6F269CB2A600BBED57 /* CatalogueElementsList */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		4DAA2D9F2695FF9C00CA9A52 /* ViewCells */ = {
+		4DAA2D9F2695FF9C00CA9A52 /* CellViews */ = {
 			isa = PBXGroup;
 			children = (
-				4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */,
-				4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */,
+				4D008E6E269CB28100BBED57 /* CatalogueElementCell */,
 			);
-			path = ViewCells;
+			path = CellViews;
 			sourceTree = "<group>";
 		};
 		4DF1C330268CC461002FB8D8 = {
@@ -89,10 +117,10 @@
 			isa = PBXGroup;
 			children = (
 				4DF1C363268E0E06002FB8D8 /* Storyboard */,
-				4DF1C354268CC679002FB8D8 /* Presenters */,
 				4DF1C353268CC66B002FB8D8 /* Views */,
 				4DF1C352268CC65B002FB8D8 /* DataSources */,
 				4DF1C351268CC60B002FB8D8 /* Models */,
+				4D008E73269CC13500BBED57 /* Extension */,
 				4DF1C33C268CC461002FB8D8 /* AppDelegate.swift */,
 				4DF1C33E268CC461002FB8D8 /* SceneDelegate.swift */,
 				4DF1C345268CC463002FB8D8 /* Assets.xcassets */,
@@ -121,19 +149,10 @@
 		4DF1C353268CC66B002FB8D8 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4DAA2D9F2695FF9C00CA9A52 /* ViewCells */,
+				4DAA2D9F2695FF9C00CA9A52 /* CellViews */,
 				4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		4DF1C354268CC679002FB8D8 /* Presenters */ = {
-			isa = PBXGroup;
-			children = (
-				4DF1C35F268CD074002FB8D8 /* CatalogueElementsPresenter.swift */,
-				4DAA2DA22697469600CA9A52 /* CatalogueElementsCellPresenter.swift */,
-			);
-			path = Presenters;
 			sourceTree = "<group>";
 		};
 		4DF1C363268E0E06002FB8D8 /* Storyboard */ = {
@@ -223,6 +242,7 @@
 				4DF1C359268CC93B002FB8D8 /* NetworkRequestProtocol.swift in Sources */,
 				4D1FEC492694CBB200DA015C /* CatalogueResource.swift in Sources */,
 				4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */,
+				4D008E75269CC16200BBED57 /* UIImageHelper.swift in Sources */,
 				4DAA2DA32697469600CA9A52 /* CatalogueElementsCellPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

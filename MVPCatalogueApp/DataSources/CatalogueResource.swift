@@ -19,10 +19,21 @@ struct CatalogueResource: APIResource {
     var url: URL
     
     init(site_id: String, category_id: String) {
-        let resourceString = "https://api.mercadolibre.com/sites/\(site_id)/search?category=\(category_id)"
-        guard let resourceURL = URL(string: resourceString) else {
+
+        let scheme = "https"
+        let host = "api.mercadolibre.com"
+        let path = "/sites/\(site_id)/search"
+        let queryItem = URLQueryItem(name: "q", value: category_id)
+        
+        var urlComponents = URLComponents()
+        urlComponents.scheme = scheme
+        urlComponents.host = host
+        urlComponents.path = path
+        urlComponents.queryItems = [queryItem]
+        
+        guard let url = urlComponents.url else {
             fatalError()
         }
-        self.url = resourceURL
+        self.url = url
     }
 }

@@ -10,7 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CatalogueElementsViewController" customModule="MVPCatalogueApp" customModuleProvider="target">
             <connections>
-                <outlet property="catalogueTableView" destination="0kq-9y-EIa" id="YxA-bO-vLX"/>
+                <outlet property="catalogueTableView" destination="807-VE-l2W" id="xYC-kt-idC"/>
                 <outlet property="view" destination="M44-Ee-dS6" id="teM-3H-oMJ"/>
             </connections>
         </placeholder>
@@ -19,7 +19,7 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="0kq-9y-EIa">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="807-VE-l2W">
                     <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>
@@ -27,10 +27,10 @@
             <viewLayoutGuide key="safeArea" id="ut4-M2-LMr"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
-                <constraint firstItem="0kq-9y-EIa" firstAttribute="leading" secondItem="ut4-M2-LMr" secondAttribute="leading" id="HuM-c4-xC4"/>
-                <constraint firstItem="0kq-9y-EIa" firstAttribute="bottom" secondItem="ut4-M2-LMr" secondAttribute="bottom" id="QQp-Xf-PQ1"/>
-                <constraint firstItem="0kq-9y-EIa" firstAttribute="trailing" secondItem="ut4-M2-LMr" secondAttribute="trailing" id="g27-vL-nxV"/>
-                <constraint firstItem="0kq-9y-EIa" firstAttribute="top" secondItem="ut4-M2-LMr" secondAttribute="top" id="v6P-HL-89w"/>
+                <constraint firstItem="807-VE-l2W" firstAttribute="trailing" secondItem="ut4-M2-LMr" secondAttribute="trailing" id="15Y-o7-N6r"/>
+                <constraint firstItem="807-VE-l2W" firstAttribute="top" secondItem="ut4-M2-LMr" secondAttribute="top" id="E8Z-sl-0je"/>
+                <constraint firstItem="807-VE-l2W" firstAttribute="bottom" secondItem="ut4-M2-LMr" secondAttribute="bottom" id="PZ0-X9-iXm"/>
+                <constraint firstItem="807-VE-l2W" firstAttribute="leading" secondItem="ut4-M2-LMr" secondAttribute="leading" id="WXa-lq-QxH"/>
             </constraints>
             <point key="canvasLocation" x="-1178.2608695652175" y="-95.089285714285708"/>
         </view>

@@ -37,12 +37,11 @@ class CatalogueElementsViewCell: UITableViewCell {
 
 extension CatalogueElementsViewCell: CatalogueElementsCellDelegate {
     
-    func displayElement(title: String, image: UIImage) {
+    func displayElement(title: String) {
         catalogueTitleLabel.text = title
-        catalogueImageView.image = image
     }
     
-    func updateImage(image: UIImage) {
+    func displayElementImage(image: UIImage) {
         catalogueImageView.image = image
     }
 }

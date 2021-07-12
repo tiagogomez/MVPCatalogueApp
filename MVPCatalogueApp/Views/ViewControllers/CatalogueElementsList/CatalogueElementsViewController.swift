@@ -13,17 +13,29 @@ class CatalogueElementsViewController: UIViewController {
     private let catalogueElementsPresenter = CatalogueElementsPresenter()
     
     var listOfElements = [CatalogueItemModel]()
+    let searchController = UISearchController()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableViewConfig()
+        searchBarConfig()
+        catalogueElementsPresenter.setViewDelegate(catalogueElementsViewDelegate: self)
+    }
+    
+    private func tableViewConfig() {
         catalogueTableView.delegate = self
         catalogueTableView.dataSource = self
-        catalogueElementsPresenter.setViewDelegate(catalogueElementsViewDelegate: self)
         catalogueTableView.register(CatalogueElementsViewCell.nib(),
                                     forCellReuseIdentifier: CatalogueElementsViewCell.identifier)
         catalogueTableView.rowHeight = UITableView.automaticDimension
         catalogueTableView.estimatedRowHeight = 138
-        catalogueElementsPresenter.loadCatalogueElements()
+    }
+    
+    private func searchBarConfig() {
+        navigationItem.title = "Search screen"
+        navigationItem.searchController = searchController
+        searchController.searchBar.delegate = self
+//        searchController.searchResultsUpdater = self
     }
 }
 
@@ -37,11 +49,7 @@ extension CatalogueElementsViewController: CatalogueElementsViewDelegate {
     }
 }
 
-extension CatalogueElementsViewController: UITableViewDelegate {
-    
-}
-
-extension CatalogueElementsViewController: UITableViewDataSource {
+extension CatalogueElementsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfElements.count
@@ -53,3 +61,24 @@ extension CatalogueElementsViewController: UITableViewDataSource {
         return catalogueCell
     }
 }
+
+extension CatalogueElementsViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        guard let text = searchController.searchBar.text, text != String() else {
+            return
+        }
+        catalogueElementsPresenter.loadCatalogueElements(with: text)
+        searchController.isActive = false
+    }
+}
+
+//extension CatalogueElementsViewController: UISearchResultsUpdating {
+//
+//    func updateSearchResults(for searchController: UISearchController) {
+//        guard let text = searchController.searchBar.text else {
+//            return
+//        }
+//        print(text)
+//    }
+//}

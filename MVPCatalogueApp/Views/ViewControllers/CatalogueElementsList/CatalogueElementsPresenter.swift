@@ -21,8 +21,8 @@ class CatalogueElementsPresenter {
         self.catalogueElementsViewDelegate = catalogueElementsViewDelegate
     }
     
-    func loadCatalogueElements() {
-        let catalogueResource = CatalogueResource(site_id: "MLA", category_id: "MLA1055")
+    func loadCatalogueElements(with category: String) {
+        let catalogueResource = CatalogueResource(site_id: "MCO", category_id: category)
         let catalogueRequest = APIRequest(resource: catalogueResource)
         self.request = catalogueRequest
         catalogueRequest.execute { [weak self] result in
