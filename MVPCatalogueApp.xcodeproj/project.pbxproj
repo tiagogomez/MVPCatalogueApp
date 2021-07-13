@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		4D008E75269CC16200BBED57 /* UIImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E74269CC16200BBED57 /* UIImageHelper.swift */; };
+		4D008E7E269DEAE900BBED57 /* CatalogueElementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E7C269DEAE900BBED57 /* CatalogueElementDetailViewController.swift */; };
+		4D008E7F269DEAE900BBED57 /* CatalogueElementDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D008E7D269DEAE900BBED57 /* CatalogueElementDetailViewController.xib */; };
+		4D008E83269DF78100BBED57 /* CatalogueElementDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */; };
 		4D0C14ED268E3E3000702AA4 /* CatalogueElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */; };
 		4D1FEC492694CBB200DA015C /* CatalogueResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1FEC482694CBB200DA015C /* CatalogueResource.swift */; };
 		4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */; };
@@ -25,6 +28,9 @@
 
 /* Begin PBXFileReference section */
 		4D008E74269CC16200BBED57 /* UIImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageHelper.swift; sourceTree = "<group>"; };
+		4D008E7C269DEAE900BBED57 /* CatalogueElementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementDetailViewController.swift; sourceTree = "<group>"; };
+		4D008E7D269DEAE900BBED57 /* CatalogueElementDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementDetailViewController.xib; sourceTree = "<group>"; };
+		4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementDetailPresenter.swift; sourceTree = "<group>"; };
 		4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementsViewController.xib; sourceTree = "<group>"; };
 		4D1FEC482694CBB200DA015C /* CatalogueResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueResource.swift; sourceTree = "<group>"; };
 		4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsViewCell.swift; sourceTree = "<group>"; };
@@ -81,9 +87,20 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
+		4D008E7B269DEA6900BBED57 /* CatalogueElementDetail */ = {
+			isa = PBXGroup;
+			children = (
+				4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */,
+				4D008E7C269DEAE900BBED57 /* CatalogueElementDetailViewController.swift */,
+				4D008E7D269DEAE900BBED57 /* CatalogueElementDetailViewController.xib */,
+			);
+			path = CatalogueElementDetail;
+			sourceTree = "<group>";
+		};
 		4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				4D008E7B269DEA6900BBED57 /* CatalogueElementDetail */,
 				4D008E6F269CB2A600BBED57 /* CatalogueElementsList */,
 			);
 			path = ViewControllers;
@@ -117,9 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				4DF1C363268E0E06002FB8D8 /* Storyboard */,
-				4DF1C353268CC66B002FB8D8 /* Views */,
-				4DF1C352268CC65B002FB8D8 /* DataSources */,
+				4DF1C353268CC66B002FB8D8 /* ViewPresenters */,
 				4DF1C351268CC60B002FB8D8 /* Models */,
+				4DF1C352268CC65B002FB8D8 /* DataSources */,
 				4D008E73269CC13500BBED57 /* Extension */,
 				4DF1C33C268CC461002FB8D8 /* AppDelegate.swift */,
 				4DF1C33E268CC461002FB8D8 /* SceneDelegate.swift */,
@@ -146,13 +163,13 @@
 			path = DataSources;
 			sourceTree = "<group>";
 		};
-		4DF1C353268CC66B002FB8D8 /* Views */ = {
+		4DF1C353268CC66B002FB8D8 /* ViewPresenters */ = {
 			isa = PBXGroup;
 			children = (
 				4DAA2D9F2695FF9C00CA9A52 /* CellViews */,
 				4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */,
 			);
-			path = Views;
+			path = ViewPresenters;
 			sourceTree = "<group>";
 		};
 		4DF1C363268E0E06002FB8D8 /* Storyboard */ = {
@@ -223,6 +240,7 @@
 				4DF1C349268CC463002FB8D8 /* LaunchScreen.storyboard in Resources */,
 				4D0C14ED268E3E3000702AA4 /* CatalogueElementsViewController.xib in Resources */,
 				4DF1C346268CC463002FB8D8 /* Assets.xcassets in Resources */,
+				4D008E7F269DEAE900BBED57 /* CatalogueElementDetailViewController.xib in Resources */,
 				4DAA2D9C2695FF2100CA9A52 /* CatalogueElementsViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -236,11 +254,13 @@
 			files = (
 				4DF1C356268CC7CE002FB8D8 /* CatalogueItemModel.swift in Sources */,
 				4DF1C360268CD074002FB8D8 /* CatalogueElementsPresenter.swift in Sources */,
+				4D008E83269DF78100BBED57 /* CatalogueElementDetailPresenter.swift in Sources */,
 				4DF1C35C268CCFC0002FB8D8 /* CatalogueElementsViewController.swift in Sources */,
 				4DF1C33D268CC461002FB8D8 /* AppDelegate.swift in Sources */,
 				4DF1C33F268CC461002FB8D8 /* SceneDelegate.swift in Sources */,
 				4DF1C359268CC93B002FB8D8 /* NetworkRequestProtocol.swift in Sources */,
 				4D1FEC492694CBB200DA015C /* CatalogueResource.swift in Sources */,
+				4D008E7E269DEAE900BBED57 /* CatalogueElementDetailViewController.swift in Sources */,
 				4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */,
 				4D008E75269CC16200BBED57 /* UIImageHelper.swift in Sources */,
 				4DAA2DA32697469600CA9A52 /* CatalogueElementsCellPresenter.swift in Sources */,

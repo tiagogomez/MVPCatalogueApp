@@ -10,6 +10,7 @@ import UIKit
 class CatalogueElementsViewController: UIViewController {
         
     @IBOutlet weak var catalogueTableView: UITableView!
+    
     private let catalogueElementsPresenter = CatalogueElementsPresenter()
     
     var listOfElements = [CatalogueItemModel]()
@@ -49,7 +50,7 @@ extension CatalogueElementsViewController: CatalogueElementsViewDelegate {
     }
 }
 
-extension CatalogueElementsViewController: UITableViewDelegate, UITableViewDataSource {
+extension CatalogueElementsViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return listOfElements.count
@@ -59,6 +60,11 @@ extension CatalogueElementsViewController: UITableViewDelegate, UITableViewDataS
         let catalogueCell = catalogueTableView.dequeueReusableCell(withIdentifier: CatalogueElementsViewCell.identifier) as! CatalogueElementsViewCell
         catalogueCell.configure(with: listOfElements[indexPath.row])
         return catalogueCell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let viewController = CatalogueElementDetailViewController(catalogueItemModel: listOfElements[indexPath.row])
+        navigationController?.pushViewController(viewController, animated: true)
     }
 }
 

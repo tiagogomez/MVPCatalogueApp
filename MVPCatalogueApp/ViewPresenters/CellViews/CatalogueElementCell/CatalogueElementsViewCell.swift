@@ -9,14 +9,15 @@ import UIKit
 
 class CatalogueElementsViewCell: UITableViewCell {
     
-    @IBOutlet weak var catalogueImageView: UIImageView!
-    @IBOutlet weak var catalogueTitleLabel: UILabel!
-    
     static let identifier = "CatalogueElementsViewCellId"
+    
     static func nib() -> UINib {
         return UINib(nibName: "CatalogueElementsViewCell",
                      bundle: nil)
     }
+    
+    @IBOutlet weak var catalogueImageView: UIImageView!
+    @IBOutlet weak var catalogueTitleLabel: UILabel!
     
     private let catalogueElementsCellPresenter = CatalogueElementsCellPresenter()
     
