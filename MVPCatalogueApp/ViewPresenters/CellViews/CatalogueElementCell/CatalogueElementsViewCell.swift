@@ -18,10 +18,12 @@ class CatalogueElementsViewCell: UITableViewCell {
     
     @IBOutlet weak var catalogueImageView: UIImageView!
     @IBOutlet weak var catalogueTitleLabel: UILabel!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     private let catalogueElementsCellPresenter = CatalogueElementsCellPresenter()
     
     func configure(with element: CatalogueItemModel) {
+        clearCell()
         catalogueElementsCellPresenter.setViewDelegate(catalogueElementsCellDelegate: self)
         catalogueElementsCellPresenter.loadCatalogueElement(element)
     }
@@ -34,6 +36,12 @@ class CatalogueElementsViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    
+    private func clearCell() {
+        catalogueTitleLabel.text = String()
+        catalogueImageView.image = UIImage()
+        loader.startAnimating()
+    }
 }
 
 extension CatalogueElementsViewCell: CatalogueElementsCellDelegate {
@@ -43,6 +51,7 @@ extension CatalogueElementsViewCell: CatalogueElementsCellDelegate {
     }
     
     func displayElementImage(image: UIImage) {
+        loader.stopAnimating()
         catalogueImageView.image = image
     }
 }

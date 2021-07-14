@@ -10,6 +10,7 @@ import UIKit
 class CatalogueElementsViewController: UIViewController {
         
     @IBOutlet weak var catalogueTableView: UITableView!
+    @IBOutlet weak var loader: UIActivityIndicatorView!
     
     private let catalogueElementsPresenter = CatalogueElementsPresenter()
     
@@ -26,8 +27,7 @@ class CatalogueElementsViewController: UIViewController {
     private func tableViewConfig() {
         catalogueTableView.delegate = self
         catalogueTableView.dataSource = self
-        catalogueTableView.register(CatalogueElementsViewCell.nib(),
-                                    forCellReuseIdentifier: CatalogueElementsViewCell.identifier)
+        catalogueTableView.register(CatalogueElementsViewCell.nib(), forCellReuseIdentifier: CatalogueElementsViewCell.identifier)
         catalogueTableView.rowHeight = UITableView.automaticDimension
         catalogueTableView.estimatedRowHeight = 138
     }
@@ -46,7 +46,22 @@ extension CatalogueElementsViewController: CatalogueElementsViewDelegate {
         self.listOfElements = catalogueElements
         DispatchQueue.main.async {
             self.catalogueTableView.reloadData()
+            self.loader.stopAnimating()
+            self.catalogueTableView.isHidden = false
         }
+    }
+}
+
+extension CatalogueElementsViewController: UISearchBarDelegate {
+    
+    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
+        guard let text = searchController.searchBar.text, text != String() else {
+            return
+        }
+        catalogueElementsPresenter.loadCatalogueElements(with: text)
+        searchController.isActive = false
+        catalogueTableView.isHidden = true
+        loader.startAnimating()
     }
 }
 
@@ -65,17 +80,6 @@ extension CatalogueElementsViewController: UITableViewDataSource, UITableViewDel
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let viewController = CatalogueElementDetailViewController(catalogueItemModel: listOfElements[indexPath.row])
         navigationController?.pushViewController(viewController, animated: true)
-    }
-}
-
-extension CatalogueElementsViewController: UISearchBarDelegate {
-    
-    func searchBarTextDidEndEditing(_ searchBar: UISearchBar) {
-        guard let text = searchController.searchBar.text, text != String() else {
-            return
-        }
-        catalogueElementsPresenter.loadCatalogueElements(with: text)
-        searchController.isActive = false
     }
 }
 

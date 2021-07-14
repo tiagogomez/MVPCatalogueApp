@@ -29,13 +29,19 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="k8X-hP-xiR">
+                        <rect key="frame" x="55.5" y="50.5" width="37" height="37"/>
+                        <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </activityIndicatorView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="k8X-hP-xiR" firstAttribute="centerX" secondItem="rtt-GB-BwQ" secondAttribute="centerX" id="2tn-LX-KNb"/>
                     <constraint firstItem="rtt-GB-BwQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Bd4-Fo-jI3"/>
                     <constraint firstItem="rtt-GB-BwQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Brq-ah-UzE"/>
                     <constraint firstItem="Qg3-4i-NJX" firstAttribute="leading" secondItem="rtt-GB-BwQ" secondAttribute="trailing" constant="10" id="Cpa-HK-biW"/>
                     <constraint firstItem="Qg3-4i-NJX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="M4o-U9-ALz"/>
                     <constraint firstAttribute="trailing" secondItem="Qg3-4i-NJX" secondAttribute="trailing" constant="10" id="PcX-79-uYY"/>
+                    <constraint firstItem="k8X-hP-xiR" firstAttribute="centerY" secondItem="rtt-GB-BwQ" secondAttribute="centerY" id="dvW-En-miK"/>
                     <constraint firstAttribute="bottom" secondItem="rtt-GB-BwQ" secondAttribute="bottom" priority="999" constant="5" id="jlq-pf-vbY"/>
                 </constraints>
             </tableViewCellContentView>
@@ -43,6 +49,7 @@
             <connections>
                 <outlet property="catalogueImageView" destination="rtt-GB-BwQ" id="je3-FF-SJu"/>
                 <outlet property="catalogueTitleLabel" destination="Qg3-4i-NJX" id="RMj-ZT-C2z"/>
+                <outlet property="loader" destination="k8X-hP-xiR" id="biW-Am-Ded"/>
             </connections>
             <point key="canvasLocation" x="-106.5217391304348" y="129.24107142857142"/>
         </tableViewCell>
