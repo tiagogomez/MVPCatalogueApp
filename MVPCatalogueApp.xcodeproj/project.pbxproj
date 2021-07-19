@@ -11,6 +11,8 @@
 		4D008E7E269DEAE900BBED57 /* CatalogueElementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E7C269DEAE900BBED57 /* CatalogueElementDetailViewController.swift */; };
 		4D008E7F269DEAE900BBED57 /* CatalogueElementDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D008E7D269DEAE900BBED57 /* CatalogueElementDetailViewController.xib */; };
 		4D008E83269DF78100BBED57 /* CatalogueElementDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */; };
+		4D008E9326A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E9226A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift */; };
+		4D008E9F26A21E7500BBED57 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E9E26A21E7500BBED57 /* ServiceManager.swift */; };
 		4D0C14ED268E3E3000702AA4 /* CatalogueElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */; };
 		4D1FEC492694CBB200DA015C /* CatalogueResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1FEC482694CBB200DA015C /* CatalogueResource.swift */; };
 		4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */; };
@@ -21,16 +23,30 @@
 		4DF1C346268CC463002FB8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF1C345268CC463002FB8D8 /* Assets.xcassets */; };
 		4DF1C349268CC463002FB8D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DF1C347268CC463002FB8D8 /* LaunchScreen.storyboard */; };
 		4DF1C356268CC7CE002FB8D8 /* CatalogueItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C355268CC7CE002FB8D8 /* CatalogueItemModel.swift */; };
-		4DF1C359268CC93B002FB8D8 /* NetworkRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C358268CC93B002FB8D8 /* NetworkRequestProtocol.swift */; };
+		4DF1C359268CC93B002FB8D8 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C358268CC93B002FB8D8 /* APIRequest.swift */; };
 		4DF1C35C268CCFC0002FB8D8 /* CatalogueElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C35B268CCFC0002FB8D8 /* CatalogueElementsViewController.swift */; };
 		4DF1C360268CD074002FB8D8 /* CatalogueElementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C35F268CD074002FB8D8 /* CatalogueElementsPresenter.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4D008E9526A1DCD200BBED57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DF1C331268CC461002FB8D8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DF1C338268CC461002FB8D8;
+			remoteInfo = MVPCatalogueApp;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		4D008E74269CC16200BBED57 /* UIImageHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageHelper.swift; sourceTree = "<group>"; };
 		4D008E7C269DEAE900BBED57 /* CatalogueElementDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementDetailViewController.swift; sourceTree = "<group>"; };
 		4D008E7D269DEAE900BBED57 /* CatalogueElementDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementDetailViewController.xib; sourceTree = "<group>"; };
 		4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementDetailPresenter.swift; sourceTree = "<group>"; };
+		4D008E9026A1DCD200BBED57 /* MVPCatalogueAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPCatalogueAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D008E9226A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsPresenterTests.swift; sourceTree = "<group>"; };
+		4D008E9426A1DCD200BBED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4D008E9E26A21E7500BBED57 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementsViewController.xib; sourceTree = "<group>"; };
 		4D1FEC482694CBB200DA015C /* CatalogueResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueResource.swift; sourceTree = "<group>"; };
 		4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsViewCell.swift; sourceTree = "<group>"; };
@@ -43,12 +59,19 @@
 		4DF1C348268CC463002FB8D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DF1C34A268CC463002FB8D8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4DF1C355268CC7CE002FB8D8 /* CatalogueItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueItemModel.swift; sourceTree = "<group>"; };
-		4DF1C358268CC93B002FB8D8 /* NetworkRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestProtocol.swift; sourceTree = "<group>"; };
+		4DF1C358268CC93B002FB8D8 /* APIRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRequest.swift; sourceTree = "<group>"; };
 		4DF1C35B268CCFC0002FB8D8 /* CatalogueElementsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsViewController.swift; sourceTree = "<group>"; };
 		4DF1C35F268CD074002FB8D8 /* CatalogueElementsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		4D008E8D26A1DCD200BBED57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DF1C336268CC461002FB8D8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -97,6 +120,15 @@
 			path = CatalogueElementDetail;
 			sourceTree = "<group>";
 		};
+		4D008E9126A1DCD200BBED57 /* MVPCatalogueAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				4D008E9226A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift */,
+				4D008E9426A1DCD200BBED57 /* Info.plist */,
+			);
+			path = MVPCatalogueAppTests;
+			sourceTree = "<group>";
+		};
 		4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				4DF1C33B268CC461002FB8D8 /* MVPCatalogueApp */,
+				4D008E9126A1DCD200BBED57 /* MVPCatalogueAppTests */,
 				4DF1C33A268CC461002FB8D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -126,6 +159,7 @@
 			isa = PBXGroup;
 			children = (
 				4DF1C339268CC461002FB8D8 /* MVPCatalogueApp.app */,
+				4D008E9026A1DCD200BBED57 /* MVPCatalogueAppTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -157,7 +191,8 @@
 		4DF1C352268CC65B002FB8D8 /* DataSources */ = {
 			isa = PBXGroup;
 			children = (
-				4DF1C358268CC93B002FB8D8 /* NetworkRequestProtocol.swift */,
+				4D008E9E26A21E7500BBED57 /* ServiceManager.swift */,
+				4DF1C358268CC93B002FB8D8 /* APIRequest.swift */,
 				4D1FEC482694CBB200DA015C /* CatalogueResource.swift */,
 			);
 			path = DataSources;
@@ -166,8 +201,8 @@
 		4DF1C353268CC66B002FB8D8 /* ViewPresenters */ = {
 			isa = PBXGroup;
 			children = (
-				4DAA2D9F2695FF9C00CA9A52 /* CellViews */,
 				4DAA2D9E2695FF8B00CA9A52 /* ViewControllers */,
+				4DAA2D9F2695FF9C00CA9A52 /* CellViews */,
 			);
 			path = ViewPresenters;
 			sourceTree = "<group>";
@@ -183,6 +218,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		4D008E8F26A1DCD200BBED57 /* MVPCatalogueAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D008E9726A1DCD200BBED57 /* Build configuration list for PBXNativeTarget "MVPCatalogueAppTests" */;
+			buildPhases = (
+				4D008E8C26A1DCD200BBED57 /* Sources */,
+				4D008E8D26A1DCD200BBED57 /* Frameworks */,
+				4D008E8E26A1DCD200BBED57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4D008E9626A1DCD200BBED57 /* PBXTargetDependency */,
+			);
+			name = MVPCatalogueAppTests;
+			productName = MVPCatalogueAppTests;
+			productReference = 4D008E9026A1DCD200BBED57 /* MVPCatalogueAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		4DF1C338268CC461002FB8D8 /* MVPCatalogueApp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DF1C34D268CC463002FB8D8 /* Build configuration list for PBXNativeTarget "MVPCatalogueApp" */;
@@ -209,6 +262,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					4D008E8F26A1DCD200BBED57 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4DF1C338268CC461002FB8D8;
+					};
 					4DF1C338268CC461002FB8D8 = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -228,11 +285,19 @@
 			projectRoot = "";
 			targets = (
 				4DF1C338268CC461002FB8D8 /* MVPCatalogueApp */,
+				4D008E8F26A1DCD200BBED57 /* MVPCatalogueAppTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		4D008E8E26A1DCD200BBED57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DF1C337268CC461002FB8D8 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -248,6 +313,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		4D008E8C26A1DCD200BBED57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D008E9326A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DF1C335268CC461002FB8D8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,9 +329,10 @@
 				4DF1C360268CD074002FB8D8 /* CatalogueElementsPresenter.swift in Sources */,
 				4D008E83269DF78100BBED57 /* CatalogueElementDetailPresenter.swift in Sources */,
 				4DF1C35C268CCFC0002FB8D8 /* CatalogueElementsViewController.swift in Sources */,
+				4D008E9F26A21E7500BBED57 /* ServiceManager.swift in Sources */,
 				4DF1C33D268CC461002FB8D8 /* AppDelegate.swift in Sources */,
 				4DF1C33F268CC461002FB8D8 /* SceneDelegate.swift in Sources */,
-				4DF1C359268CC93B002FB8D8 /* NetworkRequestProtocol.swift in Sources */,
+				4DF1C359268CC93B002FB8D8 /* APIRequest.swift in Sources */,
 				4D1FEC492694CBB200DA015C /* CatalogueResource.swift in Sources */,
 				4D008E7E269DEAE900BBED57 /* CatalogueElementDetailViewController.swift in Sources */,
 				4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */,
@@ -268,6 +342,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4D008E9626A1DCD200BBED57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DF1C338268CC461002FB8D8 /* MVPCatalogueApp */;
+			targetProxy = 4D008E9526A1DCD200BBED57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4DF1C347268CC463002FB8D8 /* LaunchScreen.storyboard */ = {
@@ -281,6 +363,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4D008E9826A1DCD200BBED57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LRDV72ARX;
+				INFOPLIST_FILE = MVPCatalogueAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santiago.MVPCatalogueAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPCatalogueApp.app/MVPCatalogueApp";
+			};
+			name = Debug;
+		};
+		4D008E9926A1DCD200BBED57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4LRDV72ARX;
+				INFOPLIST_FILE = MVPCatalogueAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.santiago.MVPCatalogueAppTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MVPCatalogueApp.app/MVPCatalogueApp";
+			};
+			name = Release;
+		};
 		4DF1C34B268CC463002FB8D8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -438,6 +560,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4D008E9726A1DCD200BBED57 /* Build configuration list for PBXNativeTarget "MVPCatalogueAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D008E9826A1DCD200BBED57 /* Debug */,
+				4D008E9926A1DCD200BBED57 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4DF1C334268CC461002FB8D8 /* Build configuration list for PBXProject "MVPCatalogueApp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

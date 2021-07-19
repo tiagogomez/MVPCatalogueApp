@@ -14,8 +14,8 @@ enum CatalogueServiceError: Error {
 }
 
 struct CatalogueResource: APIResource {
-    
-    typealias ModelType = CatalogueItemModel
+
+    typealias ResponseType = CatalogueItemModel
     var url: URL
     
     init(site_id: String, category_id: String) {
