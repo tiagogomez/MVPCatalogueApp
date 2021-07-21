@@ -17,7 +17,7 @@ protocol APIResource {
 
 protocol NetworkRequest {
     
-    associatedtype T
+    associatedtype T: Decodable
     
     func decode(_ data: Data) -> T?
     func execute(withCompletion completion: @escaping (T?) -> Void)
