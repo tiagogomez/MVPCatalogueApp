@@ -9,13 +9,20 @@ import Foundation
 
 protocol ServiceManagerProtocol {
     
+    func buildCatalogueAPIResource(with itemName: String) -> CatalogueResource
+
     func executeCatalogueAPICall(with resource: CatalogueResource,
                                  completion: @escaping ([CatalogueItemModel]?) -> Void)
 }
 
 class ServiceManager: ServiceManagerProtocol {
     
+    let siteID = "MCO"
     var catalogueRequest: APIRequest<CatalogueResource>?
+    
+    func buildCatalogueAPIResource(with itemName: String) -> CatalogueResource {
+        return CatalogueResource(site_id: siteID, item_name: itemName)
+    }
     
     func executeCatalogueAPICall(with resource: CatalogueResource,
                                  completion: @escaping ([CatalogueItemModel]?) -> Void) {

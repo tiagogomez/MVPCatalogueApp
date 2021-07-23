@@ -18,12 +18,12 @@ struct CatalogueResource: APIResource {
     typealias ResponseType = CatalogueItemModel
     var url: URL
     
-    init(site_id: String, category_id: String) {
+    init(site_id: String, item_name: String) {
 
         let scheme = "https"
         let host = "api.mercadolibre.com"
         let path = "/sites/\(site_id)/search"
-        let queryItem = URLQueryItem(name: "q", value: category_id)
+        let queryItem = URLQueryItem(name: "q", value: item_name)
         
         var urlComponents = URLComponents()
         urlComponents.scheme = scheme

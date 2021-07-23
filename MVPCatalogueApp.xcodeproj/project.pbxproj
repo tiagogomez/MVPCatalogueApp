@@ -11,13 +11,29 @@
 		4D008E7E269DEAE900BBED57 /* CatalogueElementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E7C269DEAE900BBED57 /* CatalogueElementDetailViewController.swift */; };
 		4D008E7F269DEAE900BBED57 /* CatalogueElementDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D008E7D269DEAE900BBED57 /* CatalogueElementDetailViewController.xib */; };
 		4D008E83269DF78100BBED57 /* CatalogueElementDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */; };
-		4D008E9326A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E9226A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift */; };
 		4D008E9F26A21E7500BBED57 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E9E26A21E7500BBED57 /* ServiceManager.swift */; };
 		4D0C14ED268E3E3000702AA4 /* CatalogueElementsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */; };
 		4D1FEC492694CBB200DA015C /* CatalogueResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1FEC482694CBB200DA015C /* CatalogueResource.swift */; };
 		4DAA2D9B2695FF2100CA9A52 /* CatalogueElementsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */; };
 		4DAA2D9C2695FF2100CA9A52 /* CatalogueElementsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */; };
 		4DAA2DA32697469600CA9A52 /* CatalogueElementsCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2DA22697469600CA9A52 /* CatalogueElementsCellPresenter.swift */; };
+		4DD2BBE326A9BDDE0096A2F5 /* MockServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2BBE226A9BDDE0096A2F5 /* MockServiceManager.swift */; };
+		4DD2BBE426A9BDDE0096A2F5 /* MockServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2BBE226A9BDDE0096A2F5 /* MockServiceManager.swift */; };
+		4DD2BBF926A9D4B80096A2F5 /* CatalogueElementsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C35F268CD074002FB8D8 /* CatalogueElementsPresenter.swift */; };
+		4DD2BBFC26A9D4CD0096A2F5 /* CatalogueItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C355268CC7CE002FB8D8 /* CatalogueItemModel.swift */; };
+		4DD2BC0226A9D4F90096A2F5 /* CatalogueElementDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */; };
+		4DD2BC0526A9D4FC0096A2F5 /* CatalogueElementDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E7C269DEAE900BBED57 /* CatalogueElementDetailViewController.swift */; };
+		4DD2BC0826A9D5030096A2F5 /* CatalogueElementsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C35B268CCFC0002FB8D8 /* CatalogueElementsViewController.swift */; };
+		4DD2BC0B26A9D5070096A2F5 /* CatalogueElementsCellPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2DA22697469600CA9A52 /* CatalogueElementsCellPresenter.swift */; };
+		4DD2BC0E26A9D50A0096A2F5 /* CatalogueElementsViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */; };
+		4DD2BC1126A9D5130096A2F5 /* CatalogueElementsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */; };
+		4DD2BC1426A9D5180096A2F5 /* ServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E9E26A21E7500BBED57 /* ServiceManager.swift */; };
+		4DD2BC1726A9D51A0096A2F5 /* APIRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C358268CC93B002FB8D8 /* APIRequest.swift */; };
+		4DD2BC1A26A9D51D0096A2F5 /* CatalogueResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D1FEC482694CBB200DA015C /* CatalogueResource.swift */; };
+		4DD2BC2A26A9D7640096A2F5 /* UIImageHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D008E74269CC16200BBED57 /* UIImageHelper.swift */; };
+		4DD2BC3326A9D96C0096A2F5 /* CatalogueElementsPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2BC3126A9D96C0096A2F5 /* CatalogueElementsPresenterTests.swift */; };
+		4DD2BC3F26AB323B0096A2F5 /* MockCatalogueElementsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2BC3E26AB323B0096A2F5 /* MockCatalogueElementsView.swift */; };
+		4DD2BC4326AB3A5F0096A2F5 /* MockCatalogueItemModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DD2BC4226AB3A5F0096A2F5 /* MockCatalogueItemModels.swift */; };
 		4DF1C33D268CC461002FB8D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C33C268CC461002FB8D8 /* AppDelegate.swift */; };
 		4DF1C33F268CC461002FB8D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DF1C33E268CC461002FB8D8 /* SceneDelegate.swift */; };
 		4DF1C346268CC463002FB8D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DF1C345268CC463002FB8D8 /* Assets.xcassets */; };
@@ -44,7 +60,6 @@
 		4D008E7D269DEAE900BBED57 /* CatalogueElementDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementDetailViewController.xib; sourceTree = "<group>"; };
 		4D008E82269DF78100BBED57 /* CatalogueElementDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementDetailPresenter.swift; sourceTree = "<group>"; };
 		4D008E9026A1DCD200BBED57 /* MVPCatalogueAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVPCatalogueAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D008E9226A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsPresenterTests.swift; sourceTree = "<group>"; };
 		4D008E9426A1DCD200BBED57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4D008E9E26A21E7500BBED57 /* ServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceManager.swift; sourceTree = "<group>"; };
 		4D0C14EC268E3E3000702AA4 /* CatalogueElementsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementsViewController.xib; sourceTree = "<group>"; };
@@ -52,6 +67,10 @@
 		4DAA2D992695FF2100CA9A52 /* CatalogueElementsViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsViewCell.swift; sourceTree = "<group>"; };
 		4DAA2D9A2695FF2100CA9A52 /* CatalogueElementsViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CatalogueElementsViewCell.xib; sourceTree = "<group>"; };
 		4DAA2DA22697469600CA9A52 /* CatalogueElementsCellPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsCellPresenter.swift; sourceTree = "<group>"; };
+		4DD2BBE226A9BDDE0096A2F5 /* MockServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockServiceManager.swift; sourceTree = "<group>"; };
+		4DD2BC3126A9D96C0096A2F5 /* CatalogueElementsPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogueElementsPresenterTests.swift; sourceTree = "<group>"; };
+		4DD2BC3E26AB323B0096A2F5 /* MockCatalogueElementsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCatalogueElementsView.swift; sourceTree = "<group>"; };
+		4DD2BC4226AB3A5F0096A2F5 /* MockCatalogueItemModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCatalogueItemModels.swift; sourceTree = "<group>"; };
 		4DF1C339268CC461002FB8D8 /* MVPCatalogueApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVPCatalogueApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DF1C33C268CC461002FB8D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DF1C33E268CC461002FB8D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -102,12 +121,12 @@
 			path = CatalogueElementsList;
 			sourceTree = "<group>";
 		};
-		4D008E73269CC13500BBED57 /* Extension */ = {
+		4D008E73269CC13500BBED57 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
 				4D008E74269CC16200BBED57 /* UIImageHelper.swift */,
 			);
-			path = Extension;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		4D008E7B269DEA6900BBED57 /* CatalogueElementDetail */ = {
@@ -123,7 +142,8 @@
 		4D008E9126A1DCD200BBED57 /* MVPCatalogueAppTests */ = {
 			isa = PBXGroup;
 			children = (
-				4D008E9226A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift */,
+				4DD2BBE126A9BDA60096A2F5 /* PresentersTests */,
+				4DD2BBE026A9BD8E0096A2F5 /* Mocks */,
 				4D008E9426A1DCD200BBED57 /* Info.plist */,
 			);
 			path = MVPCatalogueAppTests;
@@ -144,6 +164,24 @@
 				4D008E6E269CB28100BBED57 /* CatalogueElementCell */,
 			);
 			path = CellViews;
+			sourceTree = "<group>";
+		};
+		4DD2BBE026A9BD8E0096A2F5 /* Mocks */ = {
+			isa = PBXGroup;
+			children = (
+				4DD2BBE226A9BDDE0096A2F5 /* MockServiceManager.swift */,
+				4DD2BC3E26AB323B0096A2F5 /* MockCatalogueElementsView.swift */,
+				4DD2BC4226AB3A5F0096A2F5 /* MockCatalogueItemModels.swift */,
+			);
+			path = Mocks;
+			sourceTree = "<group>";
+		};
+		4DD2BBE126A9BDA60096A2F5 /* PresentersTests */ = {
+			isa = PBXGroup;
+			children = (
+				4DD2BC3126A9D96C0096A2F5 /* CatalogueElementsPresenterTests.swift */,
+			);
+			path = PresentersTests;
 			sourceTree = "<group>";
 		};
 		4DF1C330268CC461002FB8D8 = {
@@ -171,7 +209,7 @@
 				4DF1C353268CC66B002FB8D8 /* ViewPresenters */,
 				4DF1C351268CC60B002FB8D8 /* Models */,
 				4DF1C352268CC65B002FB8D8 /* DataSources */,
-				4D008E73269CC13500BBED57 /* Extension */,
+				4D008E73269CC13500BBED57 /* Helpers */,
 				4DF1C33C268CC461002FB8D8 /* AppDelegate.swift */,
 				4DF1C33E268CC461002FB8D8 /* SceneDelegate.swift */,
 				4DF1C345268CC463002FB8D8 /* Assets.xcassets */,
@@ -295,6 +333,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4DD2BC1126A9D5130096A2F5 /* CatalogueElementsViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +356,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D008E9326A1DCD200BBED57 /* CatalogueElementsPresenterTests.swift in Sources */,
+				4DD2BBFC26A9D4CD0096A2F5 /* CatalogueItemModel.swift in Sources */,
+				4DD2BC0B26A9D5070096A2F5 /* CatalogueElementsCellPresenter.swift in Sources */,
+				4DD2BC0526A9D4FC0096A2F5 /* CatalogueElementDetailViewController.swift in Sources */,
+				4DD2BBF926A9D4B80096A2F5 /* CatalogueElementsPresenter.swift in Sources */,
+				4DD2BC0826A9D5030096A2F5 /* CatalogueElementsViewController.swift in Sources */,
+				4DD2BC0226A9D4F90096A2F5 /* CatalogueElementDetailPresenter.swift in Sources */,
+				4DD2BC2A26A9D7640096A2F5 /* UIImageHelper.swift in Sources */,
+				4DD2BC1A26A9D51D0096A2F5 /* CatalogueResource.swift in Sources */,
+				4DD2BC3326A9D96C0096A2F5 /* CatalogueElementsPresenterTests.swift in Sources */,
+				4DD2BC1726A9D51A0096A2F5 /* APIRequest.swift in Sources */,
+				4DD2BBE426A9BDDE0096A2F5 /* MockServiceManager.swift in Sources */,
+				4DD2BC3F26AB323B0096A2F5 /* MockCatalogueElementsView.swift in Sources */,
+				4DD2BC4326AB3A5F0096A2F5 /* MockCatalogueItemModels.swift in Sources */,
+				4DD2BC0E26A9D50A0096A2F5 /* CatalogueElementsViewCell.swift in Sources */,
+				4DD2BC1426A9D5180096A2F5 /* ServiceManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +383,7 @@
 				4D008E83269DF78100BBED57 /* CatalogueElementDetailPresenter.swift in Sources */,
 				4DF1C35C268CCFC0002FB8D8 /* CatalogueElementsViewController.swift in Sources */,
 				4D008E9F26A21E7500BBED57 /* ServiceManager.swift in Sources */,
+				4DD2BBE326A9BDDE0096A2F5 /* MockServiceManager.swift in Sources */,
 				4DF1C33D268CC461002FB8D8 /* AppDelegate.swift in Sources */,
 				4DF1C33F268CC461002FB8D8 /* SceneDelegate.swift in Sources */,
 				4DF1C359268CC93B002FB8D8 /* APIRequest.swift in Sources */,

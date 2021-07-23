@@ -12,7 +12,7 @@ struct Wrapper<T: Decodable>: Decodable {
     var results: [T]
 }
 
-struct CatalogueItemModel: Codable {
+struct CatalogueItemModel: Codable, Equatable{
     
     var title: String
     var id: String

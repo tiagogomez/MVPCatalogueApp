@@ -15,16 +15,19 @@ protocol CatalogueElementsViewDelegate: NSObjectProtocol {
 class CatalogueElementsPresenter {
     
     weak private var catalogueElementsViewDelegate: CatalogueElementsViewDelegate?
-    private var serviceManager: ServiceManagerProtocol?
+    private var serviceManager: ServiceManagerProtocol
+    
+    init(serviceManager: ServiceManagerProtocol = ServiceManager()) {
+        self.serviceManager = serviceManager
+    }
     
     func setViewDelegate(catalogueElementsViewDelegate: CatalogueElementsViewDelegate?) {
         self.catalogueElementsViewDelegate = catalogueElementsViewDelegate
     }
     
-    func loadCatalogueElements(with category: String) {
-        self.serviceManager = ServiceManager()
-        let catalogueResource = CatalogueResource(site_id: "MCO", category_id: category)
-        serviceManager?.executeCatalogueAPICall(with: catalogueResource,
+    func loadCatalogueElements(with itemName: String) {
+        let catalogueResource = serviceManager.buildCatalogueAPIResource(with: itemName)
+        serviceManager.executeCatalogueAPICall(with: catalogueResource,
                                                 completion: { [weak self] result in
                                                     self?.catalogueElementsViewDelegate?.displayElements(result ?? [])
         })
